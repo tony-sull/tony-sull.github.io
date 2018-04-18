@@ -1,0 +1,224 @@
+html {
+	box-sizing: border-box;
+	font-size: 12px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-weight: 900;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.content-grid {
+	margin: 0 auto;
+	width: calc(100% - 6rem);
+}
+
+a {
+	text-decoration: none;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+@media only screen and (min-width: 375px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 425px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	html {
+		font-size: 18px;
+	}
+
+	.content-grid {
+		width: calc(100% - 10rem);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.content-grid {
+		width: calc(100% - 20rem);
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+/** Themes **/
+body {
+	background-color: var(--color-alternate);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	color: var(--color-text-primary);
+}
+
+/** blue theme **/
+.blue {
+	--color-primary: #4ea9da;
+	--color-alternate: #FAFAFA;
+	--color-highlight: #daedf7;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(250, 250, 250, 0.75);
+}
+
+/** blue-alt theme **/
+.blue-alt {
+	--color-primary: #FAFAFA;
+	--color-alternate: #4ea9da;
+	--color-highlight: #2a93cb;
+	--color-text-primary: #FAFAFA;
+	--nav-alpha: rgba(78, 169, 218, 0.75);
+}
+
+/** brown theme **/
+.brown {
+	--color-primary: #A26836;
+	--color-alternate: #FAFAFA;
+	--color-highlight: #f5ebe2;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(250, 250, 250, 0.75);
+}
+
+/** crimson-red theme **/
+.crimson-red {
+	--color-primary: #e64f52;
+	--color-alternate: #FAFAFA;
+	--color-highlight: #fbe4e4;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(250, 250, 250, 0.75);
+}
+
+/** cyan theme **/
+.cyan {
+	--color-primary: #3dc0b0;
+	--color-alternate: #FAFAFA;
+	--color-highlight: #d7f2ef;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(250, 250, 250, 0.75);
+}
+
+/** cyan-alt theme **/
+.cyan-alt {
+	--color-primary: #FAFAFA;
+	--color-alternate: #3dc0b0;
+	--color-highlight: #35a698;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(61, 192, 176, 0.75);
+}
+
+/** .green theme **/
+.green {
+	--color-primary: #5BA150;
+	--color-alternate: #FAFAFA;
+	--color-highlight: #e1efdf;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(250, 250, 250, 0.75);
+}
+
+/** grey-alt theme **/
+.grey-alt {
+	--color-primary: #FFFFFF;
+	--color-alternate: #485564;
+	--color-highlight: #333c46;
+	--color-text-primary: #FFFFFF;
+	--nav-alpha: rgba(72, 85, 100, 0.75);
+}
+
+/** indigo-alt theme **/
+.indigo-alt {
+	--color-primary: #FAFAFA;
+	--color-alternate: #303F9F;
+	--color-highlight: #242f78;
+	--color-text-primary: #FAFAFA;
+	--nav-alpha: rgba(48, 63, 159, 0.75);
+}
+
+/** material-brown theme **/
+.material-brown {
+	--color-primary: #845c4e;
+	--color-alternate: #FFFFFF;
+	--color-highlight: #eee6e3;
+	--color-text-primary: #212121;
+	--nav-alpha: rgba(255, 255, 255, 0.75);
+}
+
+/** material-cyan theme **/
+.material-cyan {
+	--color-primary: #00BCD4;
+	--color-alternate: #FFFFFF;
+	--color-highlight: #d4faff;
+	--color-text-primary: #212121;
+	--nav-alpha: rgba(255, 255, 255, 0.75);
+}
+
+/** material-grey theme **/
+.material-grey {
+	--color-primary: #607D8B;
+	--color-alternate: #FFFFFF;
+	--color-highlight: #dfe6e9;
+	--color-text-primary: #212121;
+	--nav-alpha: rgba(255, 255, 255, 0.75);
+}
+
+/** material-grey-alt theme **/
+.material-grey-alt {
+	--color-primary: #FFFFFF;
+	--color-alternate: #455A64;
+	--color-highlight: #374850;
+	--color-text-primary: #FAFAFA;
+	--nav-alpha: rgba(69, 90, 100, 0.75);
+}
+
+/** orange theme **/
+.orange {
+	--color-primary: #e17421;
+	--color-alternate: #FAFAFA;
+	--color-highlight: #f9e4d5;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(250, 250, 250, 0.75);
+}
+
+/** red theme **/
+.red {
+	--color-primary: #af3d4e;
+	--color-alternate: #FAFAFA;
+	--color-highlight: #f6e4e7;
+	--color-text-primary: #202121;
+	--nav-alpha: rgba(250, 250, 250, 0.75);
+}
+
+/** red-alt theme **/
+.red-alt {
+	--color-primary: #FFFFFF;
+	--color-alternate: #89303d;
+	--color-highlight: #63232c;
+	--color-text-primary: #FFFFFF;
+	--nav-alpha: rgba(137, 48, 61, 0.75);
+}

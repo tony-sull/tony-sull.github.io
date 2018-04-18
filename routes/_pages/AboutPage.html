@@ -1,0 +1,87 @@
+<div class='about-page'>
+    <div class='content-grid'>
+        <h1>About</h1>
+        <div class='about-wrapper'>
+            <div class='about-content'>
+                <p>
+                    I started my career working primarily on <span class='highlight'>native apps</span> for Android, iOS, and Windows Phone but have focused on <span class='highlight'>full-stack javascript</span> for the last two years.
+                </p>
+                <p>
+                    On the backend it's mainly been Node.js hosted on <span class='highlight'>AWS</span> for any production apps.  The frontend is where it really gets fun with projects in <span class='highlight'>Angular</span> and <span class='highlight'>React</span>, and most recently <span class='highlight'>Svelte and Sapper</span> (which powers this site).
+                </p>
+                <p>
+                    More of my energy is focused into <span class='highlight'>open-source</span> projects these days, staying close to the community on <span class='highlight'>Gitter</span> and starting a blog that will be released shortly!
+                </p>
+                <p>
+                    I build this site heavily influenced by <span class='highlight'>Dinesh Pandiyan</span>'s personal site - what better way to get a solid comparison of React vs. Svelte than by recreating a real-world project! Take a look at <a href='https://github.com/tonyfsullivan/tonyfsullivan.github.io' target='_blank' rel='noopener noreferrer'>Dinesh's original project</a> and the Svelte equivilent <a href='https://github.com/flexdinesh/flexdinesh.github.io' target='_blank' rel='noopener noreferrer'>here</a> and let me know what you think of the Svelte-ified code!
+                </p>
+                <p class='text-emoji'>
+                    \ (•◡•) /
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .about-page {
+        background-color: var(--color-alternate);
+        padding-top: 2rem;
+        min-height: 100vh;
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        color: var(--color-primary);
+        padding: 1rem 0;
+        font-size: 3rem;
+    }
+
+    .about-content {
+        color: var(--color-text-primary);
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
+
+    .about-content p {
+        font-weight: 300;
+        padding: 0.5rem 0;
+    }
+
+    a {
+        color: var(--color-primary);
+    }
+
+    .highlight {
+        background-color: var(--color-highlight);
+    }
+
+    ::selection {
+        background-color: var(--color-highlight);
+    }
+
+    .text-emoji {
+        color: var(--color-primary);
+        padding: 2rem 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .content-grid {
+        flex: auto;
+    }
+
+    @media only screen and (max-width: 375px) {
+        .about-page {
+            padding-top: 3rem;
+        }
+
+        .about-content {
+            font-size: 1rem;
+        }
+    }
+</style>

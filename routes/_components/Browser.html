@@ -1,0 +1,77 @@
+{#if shouldRender}
+<slot></slot>
+{/if}
+
+<script>
+    import browserCheck from '../_utils/browser-check';
+    import contains from '../_utils/contains';
+
+    const knownBrowsers = [
+        { name: 'mobile', isCurrentBrowser: browserCheck.isMobile() },
+        { name: 'chrome', isCurrentBrowser: browserCheck.isChrome() },
+        { name: 'firefox', isCurrentBrowser: browserCheck.isFirefox() },
+        { name: 'safari', isCurrentBrowser: browserCheck.isSafari() },
+        { name: 'opera', isCurrentBrowser: browserCheck.isOpera() },
+        { name: 'ie', isCurrentBrowser: browserCheck.isIE() },
+        { name: 'edge', isCurrentBrowser: browserCheck.isEdge() },
+        { name: 'blink', isCurrentBrowser: browserCheck.isBlink() }
+    ];
+
+    export default {
+        data() {
+            return {
+                browsers: [], // 'chrome', 'firefox', 'safari', 'opera', 'ie', 'edge', 'mobile', 'blink
+                only: false,
+                except: false
+            }
+        },
+
+        computed: {
+            allowedBrowsers: ({ browsers, only, except }) => {
+                const allBrowsers = browserCheck.allBrowsers;
+
+                return allBrowsers.reduce((acc, browser) => {
+                    if (except) {
+                        if (!contains(browser, browsers)) acc.push(browser);
+                    } else if (only) {
+                        if (contains(browser, browsers)) acc.push(browser);
+                    } else {
+                        // never goes here
+                    }
+
+                    return acc;
+                }, []);
+            },
+
+            restrictedBrowsers: ({ browsers, only, except }) => {
+                const allBrowsers = browserCheck.allBrowsers;
+
+                return allBrowsers.reduce((acc, browser) => {
+                    if (except) {
+                        if (contains(browser, browsers)) acc.push(browser);
+                    } else if (only) {
+                        if (!contains(browser, browsers)) acc.push(browser);
+                    } else {
+                        // never goes here
+                    }
+
+                    return acc;
+                }, []);
+            },
+
+            shouldRender: ({ allowedBrowsers, restrictedBrowsers }) => {
+                const currentBrowser = knownBrowsers.find(
+                    (browser) => browser.isCurrentBrowser === true
+                );
+
+                if (currentBrowser && contains(currentBrowser.name, restrictedBrowsers)) {
+                    return false;
+                } else if (currentBrowser && contains(currentBrowser.name, allowedBrowsers)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    }
+</script>

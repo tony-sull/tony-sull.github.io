@@ -1,0 +1,26 @@
+<div class='{ $theme.name }'>
+    <Browser except browsers='{[ "firefox" ]}'>
+        <ParallaxBackground />
+    </Browser>
+
+    <slot></slot>
+
+	<ScrollToTop />
+	<Footer />
+</div>
+
+<script>
+    import Browser from './Browser.html';
+    import Footer from './Footer.html';
+    import ParallaxBackground from './ParallaxBackground.html';
+    import ScrollToTop from './ScrollToTop.html';
+
+    export default {
+        components: {
+            Browser,
+            Footer,
+            ParallaxBackground,
+            ScrollToTop
+        }
+    }
+</script>

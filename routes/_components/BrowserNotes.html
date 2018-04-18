@@ -1,0 +1,30 @@
+<div class='browser-notes'>
+    <Browser except browsers={[ 'firefox', 'chrome', 'mobile' ]}>
+        <span>All the magic tricks in this site work best in <b>Chrome!</b></span>
+    </Browser>
+    <Browser only browsers={[ 'firefox' ]}>
+        <span>Magic background is disabled in FireFox. Try in <b>Chrome!</b></span>
+    </Browser>
+</div>
+
+<style>
+    .browser-notes {
+        font-size: 0.75rem;
+    }
+
+    .browser-notes span {
+        border-width: 1px;
+        border-style: solid;
+        padding: 0.125rem 0.5rem;
+    }
+</style>
+
+<script>
+    import Browser from './Browser.html';
+
+    export default {
+        components: {
+            Browser
+        }
+    }
+</script>

@@ -1,0 +1,67 @@
+<div class='scroll-to-next' on:click='scrollToNext()'>
+    <div class='arrow bounce'>
+        <div class='scroll-text'>Click Me</div>
+        <button class='fas fa-chevron-down fa-2x' href='#' />
+    </div>
+</div>
+
+<style>
+    .scroll-to-next {
+        cursor: pointer;
+    }
+
+    .arrow {
+        color: var(--color-primary);
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .scroll-text {
+        text-align: center;
+        font-size: 0.5rem;
+        margin-bottom: -0.125rem;
+    }
+
+    .bounce {
+        animation: bounce 2s infinite;
+    }
+
+    button {
+        background: none;
+        border: none;
+        color: var(--color-primary);
+    }
+
+    @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
+</style>
+
+<script>
+    import { toElement as scrollToElement } from '../_scroll';
+
+    export default {
+        data() {
+            return {
+                pageSelector: '' // querySelector key
+            }
+        },
+
+        methods: {
+            scrollToNext() {
+                const { pageSelector } = this.get();
+                const nextPage = document.querySelector(pageSelector);
+                scrollToElement(nextPage);
+            }
+        }
+    }
+</script>

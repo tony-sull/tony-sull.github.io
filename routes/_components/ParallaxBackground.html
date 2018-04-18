@@ -1,0 +1,101 @@
+<div class='parallax'>
+    <div id="stars1" style='box-shadow: { shadowsSmall }' />
+    <div id="stars2"  style='box-shadow: { shadowsMedium }' />
+    <div id="stars3" style='box-shadow: { shadowsLarge }' />
+</div>
+
+<style>
+    .parallax {
+        color: var(--color-primary);
+        position: fixed;
+        z-index: 1;
+    }
+
+    #stars1 {
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        background: transparent;
+        animation: animStar 150s linear infinite;
+    }
+    #stars1:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: inherit;
+    }
+
+    #stars2 {
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: transparent;
+        animation: animStar 100s linear infinite;
+    }
+    #stars2:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: inherit;
+    }
+
+    #stars3 {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: transparent;
+        animation: animStar 50s linear infinite;
+    }
+    #stars3:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: inherit;
+    }
+
+    @keyframes animStar {
+        from {
+            transform: translateY(-2000px);
+        }
+    
+        to {
+            transform: translateY(0px);
+        }
+    }
+</style>
+
+<script>
+    function random(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function multipleBoxShadow(n) {
+        let value = `${random(2000)}px ${random(2000)}px`;
+
+        for(let i = 1; i < n; i++) {
+            value += ` , ${random(2000)}px ${random(2000)}px`
+        }
+
+        return value;
+    }
+
+    export default {
+        helpers: {
+            shadowsSmall: multipleBoxShadow(700),
+            shadowsMedium: multipleBoxShadow(200),
+            shadowsLarge: multipleBoxShadow(100)
+        }
+    }
+</script>

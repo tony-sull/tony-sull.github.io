@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tony Sullivan | Full Stack Dev</title>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+	<meta name='theme-color' content='#000000'>
+
+	%sapper.base%
+
+	<link rel='stylesheet' href='global.css'>
+	<link rel='manifest' href='manifest.json'>
+	<link rel='shortcut icon' href='favicon.ico'>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+	<!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+	%sapper.styles%
+
+	<!-- This contains the contents of the <:Head> component, if
+	     the current page has one -->
+	%sapper.head%
+</head>
+<body>
+	<noscript>
+		You need to enable JavaScript to run this app.
+	  </noscript>
+	  
+	<!-- The application will be rendered inside this element,
+	     because `templates/main.js` references it -->
+	<div id='sapper'>%sapper.html%</div>
+
+	<!-- Sapper creates a <script> tag containing `templates/main.js`
+	     and anything else it needs to hydrate the app and
+	     initialise the router -->
+	%sapper.scripts%
+</body>
+</html>

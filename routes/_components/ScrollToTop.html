@@ -1,0 +1,52 @@
+<svelte:window on:scroll='handleScroll()' />
+
+<div class='scroll-top' on:click='scrollToPageTop()'>
+    <div class='arrow { shouldShowScrollTopArrow ? "" : "hide" }'>
+        <button class='fas fa-angle-double-up fa-2x' href='#' />
+        <div class='to-top'>To Top</div>
+    </div>
+</div>
+
+<style>
+    .arrow {
+        color: var(--color-primary);
+        text-align: center;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+    }
+
+    .arrow.hide {
+        display: none;
+    }
+
+    .scroll-top {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .to-top {
+        text-align: center;
+        font-size: 0.5rem;
+        padding-top: 0.125rem;
+    }
+</style>
+
+<script>
+    import { toTop as scrollToPageTop } from '../_scroll';
+
+    export default {
+        methods: {
+            handleScroll() {
+                if (!document || !document.documentElement) return;
+                
+                const boundingRect = document.documentElement.getBoundingClientRect();
+                this.set({
+                    shouldShowScrollTopArrow: boundingRect.top * -1 > 100
+                });
+            },
+            scrollToPageTop
+        },
+    }
+</script>
