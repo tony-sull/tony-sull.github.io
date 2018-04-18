@@ -1,9 +1,0 @@
-.DS_Store
-node_modules
-.sapper
-yarn.lock
-yarn-error.log
-cypress/screenshots
-templates/.*
-build
-app/manifest
