@@ -1,3 +1,5 @@
+@import url('tachyons.min.css');
+
 html {
 	box-sizing: border-box;
 	font-size: 12px;
@@ -23,11 +25,6 @@ img {
 	height: auto;
 }
 
-.content-grid {
-	margin: 0 auto;
-	width: calc(100% - 6rem);
-}
-
 a {
 	text-decoration: none;
 }
@@ -36,37 +33,89 @@ a {
 	box-sizing: inherit;
 }
 
-@media only screen and (min-width: 375px) {
-	html {
-		font-size: 14px;
+.primary {
+	color: var(--color-primary);
+}
+
+.bg-primary {
+	background-color: var(--color-alternate);
+}
+
+.bg-highlight {
+	background-color: var(--color-highlight);
+}
+
+.fill-primary {
+	fill: var(--color-primary);
+}
+
+.text {
+	color: var(--color-text-primary);
+}
+
+@media only screen and (min-width: 30rem) {
+	.primary-ns {
+		color: var(--color-primary);
+	}
+
+	.bg-primary-ns {
+		background-color: var(--color-alternate);
+	}
+
+	.bg-highlight-ns {
+		background-color: var(--color-highlight);
+	}
+
+	.fill-primary-ns {
+		fill: var(--color-primary);
+	}
+
+	.text-ns {
+		color: var(--color-text-primary);
 	}
 }
 
-@media only screen and (min-width: 425px) {
-	html {
-		font-size: 16px;
+@media only screen and (min-width: 30rem) and (max-width: 60rem) {
+	.primary-m {
+		color: var(--color-primary);
+	}
+
+	.bg-primary-m {
+		background-color: var(--color-alternate);
+	}
+
+	.bg-highlight-m {
+		background-color: var(--color-highlight);
+	}
+
+	.fill-primary-m {
+		fill: var(--color-primary);
+	}
+
+	.text-m {
+		color: var(--color-text-primary);
 	}
 }
 
-@media only screen and (min-width: 768px) {
-	html {
-		font-size: 18px;
+@media only screen and (min-width: 60rem) {
+	.primary-l {
+		color: var(--color-primary);
 	}
 
-	.content-grid {
-		width: calc(100% - 10rem);
+	.bg-primary-l {
+		background-color: var(--color-alternate);
 	}
-}
 
-@media only screen and (min-width: 1024px) {
-	.content-grid {
-		width: calc(100% - 20rem);
+	.bg-highlight-l {
+		background-color: var(--color-highlight);
 	}
-}
 
-@media only screen and (min-width: 1440px) {
-	html {
-		font-size: 20px;
+	.fill-primary-l {
+		fill: var(--color-primary);
+	}
+
+	.text-l {
+		color: var(--color-text-primary);
 	}
 }
 
