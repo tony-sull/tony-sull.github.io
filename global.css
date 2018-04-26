@@ -26,7 +26,7 @@ img {
 }
 
 a {
-	text-decoration: none;
+	color: var(--color-text-primary);
 }
 
 *, *:before, *:after {
@@ -128,6 +128,15 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 	color: var(--color-text-primary);
 }
 
+/** teal theme **/
+.teal {
+	--color-primary: #FAFAFA;
+	--color-alternate: #50ABB8;
+	--color-highlight: #40929E;
+	--color-text-primary: #FAFAFA;
+	--nav-alpha: rgba(80, 171, 184, 0.75);
+}
+
 /** blue theme **/
 .blue {
 	--color-primary: #4ea9da;
@@ -178,7 +187,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 	--color-primary: #FAFAFA;
 	--color-alternate: #3dc0b0;
 	--color-highlight: #35a698;
-	--color-text-primary: #202121;
+	--color-text-primary: #FAFAFA;
 	--nav-alpha: rgba(61, 192, 176, 0.75);
 }
 
