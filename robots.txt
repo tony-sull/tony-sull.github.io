@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://navillus.nl/sitemap.xml

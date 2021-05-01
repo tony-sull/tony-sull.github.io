@@ -1,19 +1,452 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<meta charset='utf8'>
-	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-	<meta name='theme-color' content='#000000'>
-	<link href='favicon.ico' rel='shortcut icon'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Sullivan</title>
+    <meta name="description"
+        content="Full-stack developer. Web performance and accessibility specialist. Ameteur wood worker.">
+    <link rel=“canonical” href=“https://navillus.nl/” />
 
-	<title>Svelte app</title>
+    <link href="https://unpkg.com/sanitize.css/evergreen.css" rel="stylesheet" />
+    <link href="https://unpkg.com/sanitize.css/typography.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
 
-	<link rel='stylesheet' href='global.css'>
-	<link rel='stylesheet' href='bundle.css'>
-	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <!-- All Apple touch icons for iPad, iPhone, iPod -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+
+    <!-- All favicon sizes - for all devices and browsers -->
+    <link rel="icon" type="image/png" href="/favicons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicons/favicon-128x128.png" sizes="128x128" />
+
+    <!-- A favicon with four different sizes -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico" />
+
+    <!-- Application color for Microsoft Windows app tile and Android status bar -->
+    <meta name="theme-color" content="#002244" />
+    <meta name="msapplication-TileColor" content="#002244" />
+
+    <!-- Application name for Microsoft Windows app tile -->
+    <meta name="application-name" content="Create PWA" />
+
+    <!-- Application icons for Microsoft Windows app tile -->
+    <meta name="msapplication-TileImage" content="/favicons/ms-tile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/favicons/ms-tile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/favicons/ms-tile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/favicons/ms-tile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/favicons/ms-tile-310x310.png" />
+
+    <!-- Application config file for Microsoft browsers -->
+    <meta name="msapplication-config" content="/config.xml" />
+
+    <link rel="manifest" href="/manifest.json" />
 </head>
 
 <body>
-	<script src='bundle.js'></script>
+
+    <header>
+        <a class="header__logo" href="/">Tony Sullivan</a>
+
+        <a class="header__link" href="/#contact">Get in Touch</a>
+    </header>
+
+    <main>
+        <section id="hero" class="md:col-3 lg:col-2 lg:row-3 flex center">
+            <h1>
+                <p>Every Problem is <b>Different</b></p>
+                <p>Your <b>Solutions</b> Should Be Too</p>
+            </h1>
+        </section>
+
+        <section class="bg1 sm:col-1">
+            <a href="/#tech" class="section__link">
+                <h2>Tech</h2>
+                <div class="section__footer">
+                    <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <b>TECH EXPERIENCE</b>
+                </div>
+            </a>
+        </section>
+
+        <section class="bg2 sm:col-1">
+            <a href="/#portfolio" class="section__link">
+                <h2>Portfolio</h2>
+                <div class="section__footer">
+                    <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <b>MY PROJECTS</b>
+                </div>
+            </a>
+        </section>
+
+        <section class="bg3 sm:col-1">
+            <a href="/#about" class="section__link">
+                <h2>More</h2>
+                <div class="section__footer">
+                    <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path xmlns="http://www.w3.org/2000/svg"
+                            d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <b>ABOUT ME</b>
+                </div>
+            </a>
+        </section>
+
+        <section class="lg:row-2 flex center lg:vertical">
+            <span class="anchor" id="tech"></span>
+            <h1>Tech Experience</h1>
+        </section>
+
+        <section class="flex center md:col-2 quote">
+            <p>
+                I'm passionate about efficiency and always looking for the best tool for the job. See below for a list
+                of the ones I've been using lately - a working list, since it continues to evolve as I take on new
+                projects and challenges.
+            </p>
+        </section>
+
+        <section class="card bg1 md:col-2 lg:col-1">
+            <div class="card__header">
+                <p>WEB DEVELOPMENT</p>
+            </div>
+
+            <h2 class="card__title">HTML / JS / CSS</h2>
+
+            <p>I've been doing full-stack JavaScript development since 2016 and have worked with various frameworks and
+                services over the years.</p>
+
+            <p>I have experience with various cloud providers, but AWS is my go-to for large or complex projects. They
+                have a comically long list of <em>Solutions</em>, so there's always something I can work with.</p>
+
+            <ul class="card__pills">
+                <li>NodeJS</li>
+                <li>Typescript</li>
+                <li>SASS</li>
+                <li>LESS</li>
+            </ul>
+        </section>
+
+        <section class="card bg3">
+            <div class="card__header">
+                <p>INFRASTRUCTURE</p>
+            </div>
+
+            <h2 class="card__title">Serverless + JAMStack</h2>
+
+            <p>I'm a big fan of the efficiency and simplicity of serverless functions. Throw in a static site generator
+                and you can tackle 95% of the web apps out there.</p>
+
+            <ul class="card__pills">
+                <li>Netlify</li>
+                <li>AWS Lambda</li>
+                <li>11ty</li>
+            </ul>
+        </section>
+
+        <section class="card bg2 md:col-3 lg:col-1">
+            <div class="card__header">
+                <p>WEB DEVELOPMENT</p>
+            </div>
+
+            <h2 class="card__title">Frontend Frameworks</h2>
+
+            <p>I've run the gamut of frontend frameworks over the years, including some more unique combinations like an
+                Angular PWA with Redux for stage management.</p>
+
+            <p>These days I find myself sticking to plain old hand-coded scripts, but when a framework really makes
+                sense Svelte is my go-to for a performant and lightweight web app.</p>
+
+            <ul class="card__pills">
+                <li>Svelte</li>
+                <li>Angular</li>
+                <li>React</li>
+                <li>Vue</li>
+            </ul>
+        </section>
+
+        <section class="card bg3 md:col-3 lg:col-1">
+            <div class="card__header">
+                <p>WEB APPS</p>
+            </div>
+
+            <h2 class="card__title">Real-time Apps</h2>
+
+            <p>Some of the most interesting challenges I've had to solve came while working on real-time projects.</p>
+
+            <p>From throughput quirks in the early days of AWS DynamoDB to horizontally scaling Redis subscriptions,
+                it's pretty amazing the corner cases that pop up when your app has thousands of interactive users.</p>
+
+            <ul class="card__pills">
+                <li>AWS Dynamo</li>
+                <li>Redis</li>
+                <li>Web Sockets</li>
+            </ul>
+        </section>
+
+        <section class="card bg1 md:col-3 lg:col-1">
+            <div class="card__header">
+                <p>ACCESSIBILITY</p>
+            </div>
+
+            <h2 class="card__title">User Accessibility</h2>
+
+            <p>My first research project in college was to help build an electronic voting machine that could be used by
+                anyone - regardless of any visual, hearing, or physical impairments.</p>
+
+            <p>I take this same inclusive approach on any software project I work on, and I include accessibility
+                testing as a gate for every deployment.</p>
+
+            <ul class="card__pills">
+                <li>WCAG</li>
+                <li>WAI-ARIA</li>
+            </ul>
+        </section>
+
+        <section class="flex center md:col-3 lg:col-1">
+            <span class="anchor" id="portfolio"></span>
+            <h1>
+                Recent Projects
+            </h1>
+        </section>
+
+        <section class="card bg1 md:col-3 lg:col-2" id="fanbeat">
+            <div class="card__header">
+                <p>FULL-STACK</p>
+            </div>
+
+            <h2 class="card__title">FanBeat</h2>
+            <h3 class="card__subtitle">Live-Action Sports Gaming</h3>
+
+            <p>FanBeat is a real-time sports trivia and predictive game played live during sporting events. As an early
+                member of the development team, I was reponsible for designing and implementing new features.
+            </p>
+
+            <p>As the primary web developer, I built a progressive web app to complement the native apps. The PWA proved
+                to play a pivotal role in minimizing new user friction by letting users start playing online immediately
+                and then download the native app later when there was a break in the action.</p>
+
+            <a href="https://play.fanbeat.com/" rel="noopener noreferrer" target="_blank" class="card__link">
+                <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path xmlns="http://www.w3.org/2000/svg"
+                        d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z"
+                        fill="currentColor"></path>
+                </svg>
+                <b>SEE IT IN ACTION</b>
+            </a>
+
+            <ul class="card__pills">
+                <li>AWS</li>
+                <li>NodeJS</li>
+                <li>Redis</li>
+                <li>Angular</li>
+                <li>iOS</li>
+                <li>Android</li>
+            </ul>
+        </section>
+
+        <section class="card bg3 md:col-3 lg:col-2 lg:row-2" id="kamfly">
+            <div class="card__header">
+                <p>FULL-STACK</p>
+            </div>
+
+            <h2 class="card__title">Kamfly</h2>
+            <h3 class="card__subtitle">Restaurant Online Ordering</h3>
+
+            <p>I started Kamfly in response to the impact Covid-19 had on restaurants - I wanted to empower restaurant
+                owners to accept orders online without paying 15-30% commission to the big delivery services.</p>
+
+            <p>Kamfly brings together Netlify CMS, Snipcart, and 11ty's static site generation to provide a full
+                online ordering experience - complete with CMS to manage menu prices and an in-house dashboard to
+                manage
+                orders as they come in.</p>
+
+            <p>This project hasn't gained the traction that I'd hoped, but it was an extremely interesting challenge to
+                figure out
+                how to build a complete online restaurant toolkit on a $0 budget. The Kamfly tools will ultimately be
+                open sourced and available to others wanting to manage their own online ordering.</p>
+
+            <a href="https://kamfly.io/" rel="noopener noreferrer" target="_blank" class="card__link">
+                <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path xmlns="http://www.w3.org/2000/svg"
+                        d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z"
+                        fill="currentColor"></path>
+                </svg>
+                <b>VISIT KAMFLY.IO</b>
+            </a>
+
+            <ul class="card__pills">
+                <li>AWS</li>
+                <li>Netlify</li>
+                <li>Netlify CMS</li>
+                <li>11ty</li>
+                <li>Snipcart</li>
+            </ul>
+        </section>
+
+        <section class="card bg2 md:col-3 lg:col-1 lg:row-2" id="shelter">
+            <div class="card__header">
+                <p>WEBSITE</p>
+            </div>
+
+            <h2 class="card__title">Safe-T-Shelter</h2>
+            <h3 class="card__subtitle">Safe Rooms & Storm Shelters</h3>
+
+            <p>Safe-T-Shelter has been building storm shelters for over 25 years and were ready for a website refresh to
+                go along with an online marketing push.</p>
+
+            <p>I partnered with the business owners to design and build a site that both highlights their highly rated
+                shelters as well as the history of their family owned business.</p>
+
+            <p>In combination with Safe-T-Shelter's social media marketing campaign, sales in 2020 were 500% higher than
+                their average over the last decade.</p>
+
+            <a href="https://stormshelter.com/" rel="noopener noreferrer" target="_blank" class="card__link">
+                <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path xmlns="http://www.w3.org/2000/svg"
+                        d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z"
+                        fill="currentColor"></path>
+                </svg>
+                <b>VISIT SAFE-T-SHELTER</b>
+            </a>
+
+            <ul class="card__pills">
+                <li>Netlify</li>
+                <li>11ty</li>
+                <li>Svelte</li>
+            </ul>
+        </section>
+
+        <section class="flex center lg:row-2 lg:vertical">
+            <span class="anchor" id="about"></span>
+            <h1>About Me</h1>
+        </section>
+
+        <section class="card bg1 md:col-2">
+            <div class="card__header">
+                <p>EDUCATION</p>
+                <p>2006 - 2011</p>
+            </div>
+
+            <h2 class="card__title">Bachelor of Software Engineering</h2>
+            <h3 class="card__subtitle">Auburn University</h3>
+
+            <p>After three semesters as an accounting major, I made the jump to Software Engineering and never looked
+                back.
+            </p>
+
+            <p>As an undergraduate research assistant in the Human Centered Computing Lab, I worked on an
+                electronic
+                voting system designed to be fully accessible to voters with hearing, visual, and physical impairments.
+            </p>
+
+            <p>After two summer internships with ExxonMobil and an NSF-funded summer research fellowship, I graduated
+                magna cum laude and moved out to Seattle for work and adventure..</p>
+        </section>
+
+        <section class="card bg2">
+            <div class="card__header">
+                <p>CAREER</p>
+            </div>
+
+            <h2 class="card__title">Professional Career</h2>
+            <h3 class="card__subtitle">...so far</h3>
+
+            <p>I've been fortunate to get exposure to a wide-range of environments and projects in my career to date -
+                from big tech to small start-up, automated testing to full-stack, team collaboration to solo work.</p>
+
+            <p>I've seen enough to understand what matters to me and how I best add value to a project/team, but I also
+                appreciate how much is still out there to learn — I’m just getting started.</p>
+
+            <a href="/assets/tony-sullivan-resume.pdf" rel="noopener noreferrer" target="_blank" class="card__link">
+                <svg fill="none" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path xmlns="http://www.w3.org/2000/svg"
+                        d="M12.2929 5.29289C12.6834 4.90237 13.3166 4.90237 13.7071 5.29289L19.7071 11.2929C19.8946 11.4804 20 11.7348 20 12C20 12.2652 19.8946 12.5196 19.7071 12.7071L13.7071 18.7071C13.3166 19.0976 12.6834 19.0976 12.2929 18.7071C11.9024 18.3166 11.9024 17.6834 12.2929 17.2929L16.5858 13L5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11L16.5858 11L12.2929 6.70711C11.9024 6.31658 11.9024 5.68342 12.2929 5.29289Z"
+                        fill="currentColor"></path>
+                </svg>
+                <b>FULL RESUME</b>
+            </a>
+        </section>
+
+        <section class="card bg3 md:col-2 lg:col-1">
+            <div class="card__header">
+                <p>HOBBIES</p>
+            </div>
+
+            <h2 class="card__title">Away from Keyboard</h2>
+
+            <p>I have been wood working in my spare time for years and recently jumped into the deep end of classic
+                Japanese joinery. Apparently mastery in the art of hand joinery can take 30+ years, so I've got a
+                little ways to go...</p>
+
+            <p>Last fall, I moved to a popular surfing town in the Netherlands and am looking forward to getting back
+                into board and water sports this summer.</p>
+        </section>
+
+        <section class="flex center md:hidden">
+            <h1>Get in Touch</h1>
+        </section>
+
+        <section class="card md:col-2">
+            <span class="anchor" id="contact"></span>
+            <form name="contact" name="contact" method="POST" data-netlify="true">
+                <p class="honeypot"><label>Don’t fill this out if you're human: <input name="bot-field"></label></p>
+                <div class="form__row">
+                    <div class="form__input"><label for="name">Your Name *</label> <input id="name" name="name"
+                            type="text" required="required"></div>
+                </div>
+                <div class="form__row">
+                    <div class="form__input"><label for="email">Your Email Address *</label> <input id="email"
+                            name="email" type="email" required="required"></div>
+                </div>
+                <div class="form__row">
+                    <div class="form__input"><label for="message">Your Message *</label> <textarea id="message"
+                            name="message" rows="6" required="required"></textarea></div>
+                </div><button type="submit" class="btn btn--primary">Submit</button>
+            </form>
+        </section>
+
+        <section class="center hidden md:flex">
+            <h1>Get in Touch</h1>
+        </section>
+
+        <button id="scrollToTop" class="btn btn--fab" aria-label="Scroll to top of page">
+            <span>
+                <svg fill="none" viewBox="0 0 24 24" height="1.75rem" width="1.75rem"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path xmlns="http://www.w3.org/2000/svg"
+                        d="M12 4C12.2652 4 12.5196 4.10536 12.7071 4.29289L18.7071 10.2929C19.0976 10.6834 19.0976 11.3166 18.7071 11.7071C18.3166 12.0976 17.6834 12.0976 17.2929 11.7071L13 7.41421L13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19L11 7.41421L6.70711 11.7071C6.31658 12.0976 5.68342 12.0976 5.29289 11.7071C4.90237 11.3166 4.90237 10.6834 5.29289 10.2929L11.2929 4.29289C11.4804 4.10536 11.7348 4 12 4Z"
+                        fill="currentColor"></path>
+                </svg>
+            </span>
+        </button>
+    </main>
+
+    <footer>
+        <p>© 2021 Navillus B.V.</p>
+        <a href="/privacy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="/js/app.js"></script>
 </body>
+
 </html>

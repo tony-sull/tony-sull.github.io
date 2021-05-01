@@ -1,0 +1,526 @@
+/** Global Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:focus {
+    outline-color: var(--bg3-hover);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: -0.05em;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-header);
+    line-height: 1.15;
+}
+
+b {
+    font-size: 1.5em;
+}
+
+/** Theme Variables */
+
+:root {
+    --bg: white;
+    --bg1: hsl(355, 78%, 97%);
+    --bg1-hover: hsl(355, 78%, 56%);
+    --bg2: hsl(154, 71%, 97%);
+    --bg2-hover: hsl(154, 71%, 31%);
+    --bg3: hsl(208, 100%, 97%);
+    --bg3-hover: hsl(208, 100%, 23%);
+    --border: black;
+    --fg: black;
+    --fg-alt: white;
+    --font-header: system-ui, /* macOS 10.11-10.12 */
+    -apple-system, /* Windows 6+ */
+    "Segoe UI", /* Android 4+ */
+    "Roboto", /* Ubuntu 10.10+ */
+    "Ubuntu", /* Gnome 3+ */
+    "Cantarell", /* KDE Plasma 5+ */
+    "Noto Sans", /* fallback */
+    sans-serif, /* macOS emoji */
+    "Apple Color Emoji", /* Windows emoji */
+    "Segoe UI Emoji", /* Windows emoji */
+    "Segoe UI Symbol", /* Linux emoji */
+    "Noto Color Emoji";
+    --font-text: /* macOS 10.10+ */
+    "Menlo", /* Windows 6+ */
+    "Consolas", /* Android 4+ */
+    "Roboto Mono", /* Ubuntu 10.10+ */
+    "Ubuntu Monospace", /* KDE Plasma 5+ */
+    "Noto Mono", /* KDE Plasma 4+ */
+    "Oxygen Mono", /* Linux/OpenOffice fallback */
+    "Liberation Mono", /* fallback */
+    monospace, /* macOS emoji */
+    "Apple Color Emoji", /* Windows emoji */
+    "Segoe UI Emoji", /* Windows emoji */
+    "Segoe UI Symbol", /* Linux emoji */
+    "Noto Color Emoji";
+}
+
+/** Global Helpers */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.bg1 {
+    background-color: var(--bg1);
+    transition: background-color 150ms ease, color 150ms ease;
+    will-change: background-color, color;
+    color: var(--fg);
+}
+
+.bg2 {
+    background-color: var(--bg2);
+    transition: background-color 150ms ease, color 150ms ease;
+    will-change: background-color, color;
+    color: var(--fg);
+}
+
+.bg3 {
+    background-color: var(--bg3);
+    transition: background-color 150ms ease, color 150ms ease;
+    will-change: background-color, color;
+    color: var(--fg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .bg1:hover {
+        background-color: var(--bg1-hover);
+        color: var(--fg-alt);
+    }
+    .bg2:hover {
+        background-color: var(--bg2-hover);
+        color: var(--fg-alt);
+    }
+    .bg3:hover {
+        background-color: var(--bg3-hover);
+        color: var(--fg-alt);
+    }
+}
+
+.col-2 {
+    grid-column: span 8;
+}
+
+.col-3 {
+    grid-column: span 12;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+.row-3 {
+    grid-row: span 3;
+}
+
+/** Page Shell Styles */
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: var(--font-text);
+    line-height: 1.5;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--fg);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 6px;
+    grid-column-gap: 6px;
+    padding: 0 6px 6px;
+    background-color: var(--border);
+}
+
+header, footer {
+    padding: 1.25rem;
+    border: 6px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+}
+
+header {
+    justify-content: space-between;
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-family: var(--font-header);
+    font-weight: bold;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.header__link {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer {
+    border-top: 0;
+    column-gap: 2rem;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+#scrollToTop {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease;
+    will-change: opacity;
+}
+
+#scrollToTop.active {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+/** Buttons */
+
+.btn {
+    cursor: pointer;
+    border: 3px solid var(--bg3-hover);
+    border-radius: 0.5rem;
+    background-color: var(--bg3);
+    color: var(--fg);
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 150ms ease, color 150ms ease;
+    will-change: background-color, color;
+}
+
+.btn--fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.5rem;
+    border-radius: 9999px;
+}
+
+.btn:active, .btn--fab {
+    background-color: var(--bg3-hover);
+    color: var(--bg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn:hover {
+        background-color: var(--bg3-hover);
+        color: var(--bg);
+    }
+}
+
+/** Forms */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+input, textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: 0;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+}
+
+form [type=submit] {
+    align-self: flex-start;
+}
+
+form .honeypot {
+    display: none;
+}
+
+/** Main Content Blocks */
+
+section {
+    padding: 1.25rem;
+    background-color: var(--bg);
+    min-height: 30vh;
+    grid-column: span 12;
+    position: relative;
+}
+
+section .anchor {
+    position: absolute;
+    top: -4.75rem;
+    visibility: hidden;
+}
+
+section p {
+    margin-top: 1em;
+}
+
+section p:last-of-type {
+    margin-bottom: 1em;
+}
+
+section.center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section.vertical h1 {
+    transform: rotate(90deg);
+}
+
+section.quote {
+    font-size: 1.25rem;
+    padding: 3rem;
+}
+
+.section__link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section__footer {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+/** Card Layouts */
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card>p:last-of-type {
+    flex: 1 0 0;
+}
+
+.card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    font-weight: bold;
+    opacity: 0.66667;
+    margin-bottom: 1.25rem;
+}
+
+.card__title {
+    font-size: 1.75rem;
+}
+
+.card__subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: var(--font-header);
+    opacity: 0.66667;
+    margin-top: 0.25rem;
+}
+
+.card__link {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card__pills {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.card__link+.card__pills {
+    margin-top: 0.5rem;
+}
+
+.card__pills li {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.25em 0.75em;
+    border-radius: 1.25em;
+    border: 2px solid currentColor;
+    margin-right: 0.75em;
+    margin-top: 0.5rem;
+}
+
+/** Hero Block */
+
+@media only screen and (min-width: 640px) {
+    section.quote {
+        padding: 4rem;
+    }
+    .sm\:hidden {
+        display: none;
+    }
+    .sm\:flex {
+        display: flex;
+    }
+    .sm\:col-1 {
+        grid-column: span 4;
+    }
+    .sm\:col-2 {
+        grid-column: span 8;
+    }
+    .sm\:col-3 {
+        grid-column: span 12;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header__logo {
+        font-size: 1.75rem;
+    }
+    .header__link {
+        font-size: 1.25rem;
+    }
+    section.quote {
+        padding: 5rem;
+    }
+    .md\:hidden {
+        display: none;
+    }
+    .md\:flex {
+        display: flex;
+    }
+    section {
+        grid-column: span 4;
+    }
+    section .anchor {
+        top: -5.125rem;
+    }
+    .md\:col-1 {
+        grid-column: span 4;
+    }
+    .md\:col-2 {
+        grid-column: span 8;
+    }
+    .md\:col-3 {
+        grid-column: span 12;
+    }
+    .md\:row-2 {
+        grid-row: span 2;
+    }
+    .md\:row-3 {
+        grid-row: span 3;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2.25rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    .card__title {
+        font-size: 2.25rem;
+    }
+    .lg\:hidden {
+        display: none;
+    }
+    .lg\:flex {
+        display: flex;
+    }
+    section {
+        grid-column: span 4;
+    }
+    .lg\:col-1 {
+        grid-column: span 4;
+    }
+    .lg\:col-2 {
+        grid-column: span 8;
+    }
+    .lg\:col-3 {
+        grid-column: span 12;
+    }
+    .lg\:row-2 {
+        grid-row: span 2;
+    }
+    .lg\:row-3 {
+        grid-row: span 3;
+    }
+    section.lg\:vertical h1 {
+        transform: rotate(90deg);
+    }
+}
